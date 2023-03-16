@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col">
             <div class="container-fluid">
-              <img src="./assets/logo.png" alt="logo">
+              <img src="https://cdn.discordapp.com/attachments/1034561850194546843/1083476614190485584/brand_short_by_ABEL.png" alt="logo">
             </div>
           </div>
           <div class="col">
@@ -23,6 +23,7 @@
              <a class="btn btn-primary" href="./index.html" role="button">Home</a>
              <a class="btn btn-primary" href="./upcomingEvents.html" role="button">Upcoming Events</a>
              <a class="btn btn-primary" href="./pastEvents.html" role="button">Past Events</a>
+             <a class="btn btn-primary" href="details.html" role="button">Details</a>
              <a class="btn btn-primary" href="./stats.html" role="button">Stats</a>
              <a class="btn btn-primary" href="./contact.html" role="button">Contact</a>
            </div>
@@ -31,6 +32,9 @@
       </nav>
       
       <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="slider-main-container">
+          <p class="slider-page">HOME</p>
+      </div>
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -40,9 +44,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="..." class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Home</h5>
               <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
@@ -86,40 +88,20 @@
       </div>
    
     </header>
-
-    <main id="main">
-          <div class="row m-4 y-4">
-            <div class="col-8">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                    <label class="form-check-label" for="inlineCheckbox3">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                    <label class="form-check-label" for="inlineCheckbox4">Category</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                    <label class="form-check-label" for="inlineCheckbox5">Category</label>
-                </div>
-            </div>
-            <div class="col-4">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>    
-            
-           </div>
-
+    <section>
+       <div id="checkContainer"class="p-3 d-flex flex-wrap justify-content-center gap-3"></div>
+      
+       </div>
+        <div class=" col p-3 d-flex flex-wrap justify-content-center gap-3">
+            <form class="d-flex" role="search">
+                <input id="addText" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+                <button  class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>     
+       </div>
+    </section>
+    <main id="main">     
+      <button type="button" class="btn btn-primary">Details</button>
     </main>
 
     <footer>

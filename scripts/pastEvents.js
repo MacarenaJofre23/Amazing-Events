@@ -1,19 +1,28 @@
 let contenedorMainPast = document.getElementById("mainPast")
+let Events = data.events
 
-let arrayPastEvents = filterPastEvents(data.currentDate,data.events)
+let currentDate = data.currentDate
 
-contenedorMainPast.innerHTML = dibujarCard(arrayPastEvents)
+let pastEvents = ""
 
-function filterPastEvents(currentDate,arrayEvents){
-    
-    let array = []
-    for (evento of arrayEvents) {
+let containerCards = document.getElementById("main")
 
-        if(evento.date < currentDate){
-            array.push(evento)
-        }
-
+function eventPast (array, datte) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].date < datte) {
+      pastEvents += `
+    <div class="card m-5 col-3" style="width: 18rem  justify-content-center">
+        <img src="${array[i].image}" class="card-img" alt="${array[i].name}"> 
+      <div class="card-body">
+        <h5 class="card-title">${array[i].name}</h5>
+        <p class="card-text">${array[i].description}</p>
+        <p class"card-text">Date of Event: ${array[i].date}</p>
+        <p class="card-text">Precio: ${array[i].price}</p> 
+      
+     </div>
+  </div>`
     }
-
-    return array
+  }
 }
+eventPast (Events, currentDate);
+contenedorMainPast.innerHTML = pastEvents
