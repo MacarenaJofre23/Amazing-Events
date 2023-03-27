@@ -132,3 +132,8 @@ main #form{
 #detailH1{
    padding: 10%;
 }
+.one{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

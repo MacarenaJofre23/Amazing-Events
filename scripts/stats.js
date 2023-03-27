@@ -45,9 +45,9 @@ async function fromApi() {
 
       oneTable.innerHTML = `
     <tr>
-      <td>${ event[0].name + " " +  event[0].percentage}%</td>
-       <td>${ event[ event.length - 1].name + " " +  event[ event.length - 1].percentage}%</td>
-       <td>${capacityE[0].name + " capacity " + capacityE[0].capacity}</td>
+      <td class="one">${ event[0].name + " : " +  event[0].percentage}%</td>
+       <td >${ event[ event.length - 1].name + " : " +  event[ event.length - 1].percentage}%</td>
+       <td >${capacityE[0].name + " : " + capacityE[0].capacity}</td>
     <tr>`
    }
 
@@ -102,9 +102,9 @@ async function fromApi() {
          element.categoryUpcoming
          tablaUpcoming += `
    <tr>
-      <td>${element.category}</td>
+      <td class="one">${element.category}</td>
       <td>$ ${element.estimateRevenue}</td>
-      <td>${element.percentageAssist}%</td>
+      <td class="one">${element.percentageAssist}%</td>
    <tr>
 `})
    twoTable.innerHTML = tablaUpcoming;
@@ -129,7 +129,7 @@ async function fromApi() {
       })
       percentageCategory.map(valor => {
          incomePercentage.push({
-            category: valor.categoria,
+            category: valor.category,
             revenue: valor.data.map(data => data.assistance * data.price),
             assistance: valor.data.map(data => data.assistance),
             capacity: valor.data.map(data => data.capacity)
@@ -161,9 +161,9 @@ async function fromApi() {
          element.categoryPast 
          tablaPast += `
    <tr>
-     <td>${element.category}</td>
+     <td class="one">${element.category}</td>
      <td>$ ${element.revenue}</td>
-     <td>${element.percentageAssist}%</td>
+     <td class="one">${element.percentageAssist}%</td>
    <tr>
  `})
   threeTable.innerHTML = tablaPast;
