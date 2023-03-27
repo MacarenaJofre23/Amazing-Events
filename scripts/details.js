@@ -1,17 +1,17 @@
 //captura de variables
-let stringQuery = location.search
-let params = new URLSearchParams(stringQuery)
-let idQuery = params.get("id")
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+  .then((response) => response.json())
+  .then(detailsEvent => {
+    eventosApi = detailsEvent
 
-let eventDetails = data.events.find(element => element._id == idQuery)
+    let date = eventosApi.events
+    let idQuery = new URLSearchParams(location.search).get("id")
 
-let cardDetails = document.getElementById("containerDetails")
+    let eventDetails = date.find(element => element._id == idQuery)
+   
+    let cardDetails =document.getElementById("containerDetails")
 
-console.log(eventDetails);
-
-let stringHtml =""
-
-stringHtml =
+cardDetails.innerHTML =
 
  ` <div class="card m-5 col-3" style="width: 18rem;">
         <img src="${eventDetails.image}" class="card-img">
@@ -28,4 +28,7 @@ stringHtml =
         </div>
     </div> `
 
-cardDetails.innerHTML = stringHtml
+  })
+
+
+

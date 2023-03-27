@@ -32,127 +32,49 @@
           </nav>
         <div class="carousel">
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="./upcomingEvents.html"></a>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img-2-carousel.jpg.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img-3-carousel.jpg.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <h2 class="home" >Stats Events</h2>
             </div>
         </div>
     </header>
-
-    <main>
-        <table class="table">
-            <thead class="table-primary">
-                <tr>
-                    <th>Events statistics</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody class="table-secondary">
-                <tr>
-                    <td>Events with highest percentage of afthendance</td>
-                    <td>Events with the lowest percentageof alfentendance</td>
-                    <td>Events with larger capacity</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tbody>
-        </table>
-
-        <table class="table">
-            <thead class="table-primary">
-                <tr>
-                    <th> Upcomingevents statistics by category</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody class="table-secondary">
-                <tr>
-                    <td>Categories</td>
-                    <td>Revenues</td>
-                    <td>Percentage of altendance</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table">
-            <thead class="table-primary">
-                <tr>
-                    <th>Past Events statistics by category</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody class="table-secondary">
-                <tr>
-                    <td>Categories</td>
-                    <td>Revenues</td>
-                    <td>Percentage of altendance</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-
+    </header>
+    <main class="tableS">
+      <h5>Events statistics</h5>
+      <table class="table table-bordered">
+          <thead class="table-primary">
+              <tr>
+                  <th>Events with the highest percentage of attendance</th>
+                  <th>Events with the lowest percentage of attendance</th>
+                  <th>Event with larger capacity</th>
+              </tr>
+          </thead>
+          <tbody id="firstTable" class="table-secondary">
+          </tbody>
+      </table>
+      <h5>Upcoming events statistics by category</h5>
+      <table class="table table-bordered">
+          <thead class="table-primary">
+              <tr>
+                  <th>Categories</th>
+                  <th>Revenues</th>
+                  <th>Percentage of estimated attendance</th>
+              </tr>
+          </thead>
+          <tbody id="secondTable" class="table-secondary">
+          </tbody>
+      </table>
+      <h5>Past events statistics by category</h5>
+      <table class="table table-bordered ">
+          <thead class="table-primary ">
+              <tr>
+                  <th>Categories</th>
+                  <th>Revenues</th>
+                  <th>Percentage of attendance</th>
+              </tr>
+          </thead>
+          <tbody id="thirdTable" class="table-secondary">
+          </tbody>
+      </table>
+  </main>
     <footer>
         <div class="row">
             <div class="div-icon col-8">
@@ -171,6 +93,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/008b8e4df8.js" crossorigin="anonymous"></script>
+    <script src="./scripts/stats.js"></script>
     <link rel="stylesheet" href="style.css">
 </body>
 

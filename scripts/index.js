@@ -1,17 +1,28 @@
+let eventosApi
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+  .then((response) => response.json())
+  .then(events => {
+    eventosApi = events
+    let eventos = eventosApi.events
+    drawCards(eventos)
+    crearCheckBox(eventos)
+
+    //Filtrar Primer y Segundo Filtro
+    function superFilter(){
+      let firstFilter = textFilter(eventos,input.value)
+      let secondFilter = filterCategory(firstFilter)
+      drawCards(secondFilter)
+}
+//Llamando a eventos
+input.addEventListener('input', superFilter)
+checkContainer.addEventListener('change', superFilter)
+  })
+  
 //variables capturadas 
 let containerMain = document.getElementById('main')
 let input = document.getElementById('addText')
-//let checkContainer = document.getElementById('checkContainer')
+let checkContainer = document.getElementById('checkContainer')
 
-//Llamando a eventos
-  input.addEventListener('input', superFilter)
-
-  checkContainer.addEventListener('change', superFilter)
-
-//Llamando Funciones
-  crearCheckBox(data.events)
-  drawCards(data.events)
-  
 //CREANDO FUNCIONES
 
 //Funcion Dibujar Tarjetas
@@ -36,7 +47,7 @@ function drawCards(arrayEvents){
                     <a class="btn btn-primary" href="./details.html?id=${event._id}">Details</a>
         </div> `
     })
-    containerMain.innerHTML =  containerHTML
+    containerMain.innerHTML = containerHTML
 }
 
 //Funcion Filtrar con Texto
@@ -62,9 +73,9 @@ function crearCheckBox(array){
    })
    checkContainer.innerHTML = checks
 }
+
 //Funcion Filtrar Categoria
 function filterCategory(array){
-//let checkboxes = document.getElementById("inputCheck[type='checkbox']")
 let checkboxes = document.querySelectorAll("input[type='checkbox']")
 let arrayChecks = Array.from(checkboxes)
 let checksCheckeados = arrayChecks.filter(check => check.checked)
@@ -78,11 +89,4 @@ let arrayFilter = array.filter(element => categories.includes(element.category))
 console.log('fil')
 console.log(arrayFilter)
 return arrayFilter
-}
-
-//Filtrar Primer y Segundo Filtro
-function superFilter(){
-  let firstFilter = textFilter(data.events,input.value)
-    let secondFilter = filterCategory(firstFilter)
-    drawCards(secondFilter)
 }

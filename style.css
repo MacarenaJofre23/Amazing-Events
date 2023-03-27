@@ -3,7 +3,15 @@ body{
    height: 100%;
    background-color: rgb(240, 233, 224);
 }
-
+.home{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10rem;
+      font-size: 3rem;
+      color: aliceblue;
+    
+}
 header nav img {
    margin: 1rem;
    width: 5rem; 
@@ -120,4 +128,7 @@ main #form{
 #imgCard{
    width: 25rem;
    height: 25rem;
+}
+#detailH1{
+   padding: 10%;
 }
